@@ -1,11 +1,11 @@
-//Actions
-const ADD_BOOK = "redux/books/ADD_BOOK";
-const REMOVE_BOOK = "redux/books/REMOVE_BOOK";
+// Actions
+const ADD_BOOK = 'redux/books/ADD_BOOK';
+const REMOVE_BOOK = 'redux/books/REMOVE_BOOK';
 
-//Reducer
-const books = (state=[], action) => {
-  switch (action.type){
-    case ADD_BOOK: 
+// Reducer
+export default function booksReducer(state = [], action) {
+  switch (action.type) {
+    case ADD_BOOK:
       return [
         ...state,
         action.payload.book,
@@ -19,15 +19,12 @@ const books = (state=[], action) => {
   }
 }
 
-//Action Creators
+// Action Creators
 
-const addBookAction = (book) => {
-  return {type:ADD_BOOK, payload: {book: book}};
-}
+const addBookAction = (book) => ({ type: ADD_BOOK, payload: { book } });
 
-const removeBookAction = (id) => {
-  return {type: REMOVE_BOOK, payload: {id: id}};
-}
+const removeBookAction = (id) => ({ type: REMOVE_BOOK, payload: { id } });
 
-export default books;
-export {ADD_BOOK, REMOVE_BOOK, addBookAction, removeBookAction};
+export {
+  ADD_BOOK, REMOVE_BOOK, addBookAction, removeBookAction,
+};

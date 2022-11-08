@@ -1,11 +1,10 @@
-//Actions
-const CHECK_STATUS = "redux/categories/";
+// Actions
+const CHECK_STATUS = 'redux/categories/';
 
-
-//Reducer
-const categories = (state=[], action) => {
-  switch (action.type){
-    case CHECK_STATUS: 
+// Reducer
+export default function categoriesReducer(state = [], action) {
+  switch (action.type) {
+    case CHECK_STATUS:
       return 'Under construction';
 
     default:
@@ -13,11 +12,8 @@ const categories = (state=[], action) => {
   }
 }
 
-//Action Creators
+// Action Creators
 
-const checkStatusAction = (book) => {
-  return {type:CHECK_STATUS};
-}
+const checkStatusAction = () => ({ type: CHECK_STATUS });
 
-export default categories;
-export {CHECK_STATUS, checkStatusAction};
+export { CHECK_STATUS, checkStatusAction };
