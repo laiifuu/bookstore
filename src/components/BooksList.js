@@ -15,11 +15,11 @@ const BooksList = (props) => {
 };
 
 BooksList.propTypes = {
-  booksList: PropTypes.arrayOf({
-    id: PropTypes.string.isRequired,
+  booksList: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
     author: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-  }).isRequired,
+  })).isRequired,
 };
 
 export default BooksList;
