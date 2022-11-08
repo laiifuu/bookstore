@@ -1,14 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import AddBookForm from './AddBookForm';
 import BooksList from './BooksList';
 
 const BooksPage = () => {
-  const list = [{
-    id: 1,
-    title: 'The hunger games',
-    author: 'Suzanne Collins',
-  },
-  ];
+  const list = useSelector((state) => state.books);
   return (
     <>
       <BooksList booksList={list} />
