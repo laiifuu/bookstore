@@ -1,5 +1,5 @@
 // Actions
-const CHECK_STATUS = 'redux/categories/';
+const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
 // Reducer
 export default function categoriesReducer(state = [], action) {

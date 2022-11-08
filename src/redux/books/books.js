@@ -1,6 +1,6 @@
 // Actions
-const ADD_BOOK = 'redux/books/ADD_BOOK';
-const REMOVE_BOOK = 'redux/books/REMOVE_BOOK';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 // Reducer
 export default function booksReducer(state = [], action) {
