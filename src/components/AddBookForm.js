@@ -35,8 +35,8 @@ const AddBookForm = () => {
 
   return (
     <section className="add-book-form">
-      <h2>ADD NEW BOOK</h2>
-      <form className="books-list" onSubmit={(e) => returnState(e)}>
+      <h2 className="form-heading">ADD NEW BOOK</h2>
+      <form onSubmit={(e) => returnState(e)}>
         <input
           className="titleInput"
           type="text"
@@ -66,7 +66,7 @@ const AddBookForm = () => {
           <option value="Contemporary">Contemporary</option>
         </select>
 
-        <button type="submit">ADD BOOK</button>
+        <button className="primary-btn" type="submit">ADD BOOK</button>
       </form>
     </section>
   );

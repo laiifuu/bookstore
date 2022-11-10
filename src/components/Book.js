@@ -16,21 +16,45 @@ const Book = (props) => {
   return (
     <div className="book-card">
       <div className="book-info">
-        <span>{category}</span>
-        <h2>{title}</h2>
-        <span>{author}</span>
+        <div className="info">
+          <span className="category">{category}</span>
+          <h2 className="book-title">{title}</h2>
+          <span className="book-author">{author}</span>
+        </div>
+
         <div className="book-controls">
-          <button type="button">Comments</button>
-          <button type="button" onClick={() => delBook()}>Remove</button>
-          <button type="button">Edit</button>
+          <button className="secondary-btn" type="button">
+            Comments
+          </button>
+          <button
+            className="secondary-btn"
+            type="button"
+            onClick={() => delBook()}
+          >
+            Remove
+          </button>
+          <button className="secondary-btn" type="button">
+            Edit
+          </button>
         </div>
       </div>
       <div className="progress-info">
-        <div className="progress-percentage">100%</div>
+        <div className="progress-percentage">
+          <div className="circle-progress" />
+          <div className="percentage-div">
+            <span className="percentage">100%</span>
+            <span className="completed">Completed</span>
+          </div>
+        </div>
+        <div className="divider" />
         <div className="progress-chapter">
-          <span>CURRENT CHAPTER</span>
-          <span>Chapter 25</span>
-          <button type="button">UPDATE PROGRESS</button>
+          <div className="progress">
+            <span className="current-chapter-title">CURRENT CHAPTER</span>
+            <span className="current-chapter">Chapter 25</span>
+          </div>
+          <button className="primary-btn update-progress" type="button">
+            UPDATE PROGRESS
+          </button>
         </div>
       </div>
     </div>
