@@ -2,14 +2,15 @@
   --blue: #0290ff;
   --black: #121212;
   --grey: grey;
+  --pale-grey: #f5f6fa;
   --genre-size: 0.875rem;
   --book-title-size: 1.375rem;
   --logo-size: 1.875rem;
   --nav-link-size: 0.813rem;
   --form-heading-size: 1.25rem;
   --secondary-btn-color: #4386bf;
-  --robotoSlab: 'Roboto Slab', serif;
-  --montserrat: 'Montserrat', sans-serif;
+  --robotoSlab: "Roboto Slab", serif;
+  --montserrat: "Montserrat", sans-serif;
 }
 
 * {
@@ -21,7 +22,7 @@
 }
 
 body {
-  padding: 20px;
+  background-color: var(--pale-grey);
 }
 
 button,
@@ -36,6 +37,8 @@ header {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  background: white;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -68,6 +71,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 20px;
 }
 
 /* book styling */
@@ -264,7 +268,6 @@ select {
 /* desktop view */
 @media screen and (min-width: 768px) {
   body {
-    padding: 5rem;
   }
 
   main {
@@ -281,16 +284,21 @@ select {
     flex-direction: row;
     justify-content: flex-start;
     gap: 30px;
+    margin: 0 0 2.375rem;
+    padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   }
 
   .categories {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    margin: 0 6.188rem 0 6.25rem;
   }
 
   .books-list {
     gap: 30px;
+    padding: 0;
+    margin: 0 6.188rem 0 6.25rem;
     padding-bottom: 40px;
     border-bottom: 1px solid #e8e8e8;
   }
@@ -313,7 +321,7 @@ select {
   }
 
   .add-book-form {
-    padding: 0;
+    padding: 0 6.188rem 6rem 6.25rem;
   }
 
   form {
