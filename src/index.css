@@ -267,9 +267,6 @@ select {
 
 /* desktop view */
 @media screen and (min-width: 768px) {
-  body {
-  }
-
   main {
     gap: 40px;
   }
